@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactMe.css';
-import { FaEnvelope, FaPhoneAlt, FaCoffee, FaLinkedin } from 'react-icons/fa';
+import { FaEnvelope, FaPhoneAlt, FaLinkedin } from 'react-icons/fa';
 
 const userData = {
   name: "Lalu M",

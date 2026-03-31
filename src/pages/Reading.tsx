@@ -21,8 +21,8 @@ const books = [
 const Reading: React.FC = () => {
   return (
     <div className="reading-container">
-      <h2 className="reading-title"></h2>
-      <p className="reading-intro"></p>
+      <h2 className="reading-title">My Favorite Books</h2>
+      <p className="reading-intro">Books that have shaped my perspective</p>
       <div className="books-grid">
         {books.map((book, index) => (
           <div key={index} className="book-card" style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}>
