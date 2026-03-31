@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import './ProfileBanner.css';
 import PlayButton from '../components/PlayButton';
 import MoreInfoButton from '../components/MoreInfoButton';
-import { getProfileBanner } from '../queries/getProfileBanner';
 import { ProfileBanner as ProfileBannerType } from '../types';
 
-const fallbackBanner: ProfileBannerType = {
+const bannerData: ProfileBannerType = {
   backgroundImage: { url: 'https://assets.nflxext.com/ffe/siteui/vlv3/6bb3bd6c-76b0-4108-9202-f68af1beb2a0/web_tall_panel/US-en-20260323-TRIFECTA-perspective_c0c45de7-747f-477d-98fe-b00abc5ec4fd_large.jpg' },
   headline: 'LALU M',
   resumeLink: { url: 'https://drive.google.com/file/d/1K5Aj6jh4dvbHlQDSUAnmBW4-KEL7OUvq/view?usp=sharing' },
@@ -14,25 +13,6 @@ const fallbackBanner: ProfileBannerType = {
 };
 
 const ProfileBanner: React.FC = () => {
-  const [bannerData, setBannerData] = useState<ProfileBannerType | null>(null);
-
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const data = await getProfileBanner();
-        setBannerData(data);
-      } catch (err) {
-        // DatoCMS can return 401 if tokens aren’t configured for this environment.
-        // Keep the UI intact by falling back to local portfolio text.
-        console.error('Failed to fetch profile banner, using fallback:', err);
-        setBannerData(fallbackBanner);
-      }
-    }
-    fetchData();
-  }, []);
-
-  if (!bannerData) return <div>Loading...</div>;
-
   const handlePlayClick = () => {
     window.open(bannerData.resumeLink.url, '_blank');
   };
