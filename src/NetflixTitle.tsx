@@ -14,6 +14,15 @@ const NetflixTitle = () => {
     setIsClicked(true); // Starts animation after clicking
   };
 
+  // Automatically trigger animation on page load
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsClicked(true);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, []);
+
+  // Redirect after animation completes
   useEffect(() => {
     if (isClicked) {
       const timer = setTimeout(() => {

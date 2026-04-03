@@ -11,39 +11,26 @@ const iconData: { [key: string]: JSX.Element } = {
 
 const myCertifications = [
   {
-    title: "Python for Data Science",
+    title: "Foundation Level in Programming and Data Science",
     issuer: "IIT Madras",
     issuedDate: "2024",
     iconName: "university",
     link: "#"
   },
   {
-    title: "Machine Learning Foundations",
-    issuer: "IIT Madras BS Degree",
+    title: "Python (Basics)",
+    issuer: "HackerRank",
     issuedDate: "2024",
-    iconName: "university",
-    link: "#"
+    iconName: "company",
+    link: "https://www.hackerrank.com/certificates/1ab908524fe2"
   },
+
   {
-    title: "Deep Learning Specialization",
+    title: "Foundatiions of AI and Machine Learning",
     issuer: "Coursera",
     issuedDate: "2025",
     iconName: "coursera",
-    link: "#"
-  },
-  {
-    title: "Computer Vision Basics",
-    issuer: "Coursera",
-    issuedDate: "2025",
-    iconName: "coursera",
-    link: "#"
-  },
-  {
-    title: "Uyir Road Safety Hackathon – Best Project Award",
-    issuer: "Uyir Hackathon",
-    issuedDate: "2025",
-    iconName: "ieee",
-    link: "#"
+    link: "https://coursera.org/share/27c07b1c9558c2cbe937e4daceac697a"
   },
 ];
 

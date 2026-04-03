@@ -7,6 +7,13 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Make dates visible */
+.vertical-timeline-element-date {
+  color: #fff !important;
+  font-size: 1rem !important;
+  font-weight: bold !important;
+  opacity: 1 !important;
+}
 
 .timeline-container {
   text-align: center;

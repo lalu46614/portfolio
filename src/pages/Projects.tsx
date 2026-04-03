@@ -2,6 +2,17 @@ import React from 'react';
 import './Projects.css';
 import { FaReact, FaNodeJs, FaPython } from 'react-icons/fa';
 import { SiOpencv, SiTensorflow, SiPytorch, SiSqlite } from 'react-icons/si';
+import uyirImage from '../images/uyir.jpg';
+import prismImage from '../images/Prism.png';
+import easyImage from '../images/easyRecruit.png';
+
+interface Project {
+  title: string;
+  description: string;
+  techUsed: string;
+  image: string;
+  github: string;
+}
 
 const techIcons: { [key: string]: JSX.Element } = {
   "React": <FaReact />,
@@ -14,38 +25,47 @@ const techIcons: { [key: string]: JSX.Element } = {
   "SQLite": <SiSqlite />,
 };
 
-const myProjects = [
+const myProjects: Project[] = [
   {
     title: "AI Accident Detection System (Uyir Project)",
     description:
-      "Developed a real-time accident detection and emergency response system using computer vision. The model detects accidents, analyzes severity, and helps notify authorities instantly. This project won the Best Project Award at the Uyir Road Safety Hackathon 2025.",
+      "Developed a real-time accident detection and emergency response system using YOLO. The model detects accidents, analyzes severity, and helps notify authorities instantly. This project won the Best Project Award at the Uyir Road Safety Hackathon 2025.",
     techUsed: "Python, OpenCV, YOLOv5",
-    image: "/projects/accident.jpg", // replace with your image
+    image: uyirImage,
+    github: "https://github.com/lalu46614/V-AID-model",
+  },
+    {
+    title: "Liquibase Migration Dashboard",
+    description:
+      "A DevOps/DB admin console for managing Liquibase-managed MySQL schema migrations across three environments: DEV, QA, and PROD. The dashboard provides real-time status updates, migration history, and error tracking to streamline database change management.",
+    techUsed: "GitHub Actions, Mysql, Liquibase",
+    image: prismImage,
+    github: "https://github.com/lalu46614/CICDforLiquibaseMigration",
   },
   {
-    title: "Emotion Recognition System",
+    title: "Semantic Bucket Orchestration System",
     description:
-      "Built a multi-modal emotion recognition system for video conferencing using facial and audio cues. The system provides real-time feedback and generates emotion insights for meetings.",
-    techUsed: "Python, PyTorch, Computer Vision",
-    image: "/projects/emotion.jpg",
+      "Built an orchestration system to categorize and route tasks using semantic buckets, enabling efficient workflow management across multiple services and communication channels.",
+    techUsed: "Python, APIs, Backend Systems",
+    image: "/projects/omnichannel.jpg",
+    github: "https://github.com/lalu46614/Semantic-Bucket-Orchestration",
   },
   {
     title: "RecruitAI – AI Recruitment System",
     description:
-      "Designed and developed an AI-powered recruitment platform that analyzes job descriptions and resumes, ranks candidates, and assists recruiters with shortlisting and interview workflows.",
+      "An Automated recruitment assistant that analyzes resumes, job descriptions, and candidate fit using a multi-agent system and intuitive React interface. It streamlines the hiring process by providing insights and recommendations to recruiters.",
     techUsed: "React, Node.js, SQLite",
-    image: "/projects/recruitai.jpg",
+    image: easyImage,
+    github: "https://github.com/lalu46614/EasyRecruit",
   },
-  {
-    title: "Traffic Signal Optimization System",
-    description:
-      "Built an intelligent traffic management system that dynamically adjusts signal timings based on vehicle density and prioritizes emergency vehicles like ambulances.",
-    techUsed: "Python, OpenCV",
-    image: "/projects/traffic.jpg",
-  },
+
 ];
 
 const Projects: React.FC = () => {
+  const handleProjectClick = (githubUrl: string) => {
+    window.open(githubUrl, '_blank');
+  };
+
   return (
     <div className="projects-container">
       <div className="projects-grid">
@@ -54,6 +74,7 @@ const Projects: React.FC = () => {
             key={index}
             className="project-card"
             style={{ '--delay': `${index * 0.1}s` } as React.CSSProperties}
+            onClick={() => handleProjectClick(project.github)}
           >
             <img
               src={project.image}
