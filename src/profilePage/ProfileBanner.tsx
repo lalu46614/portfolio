@@ -7,7 +7,7 @@ import { ProfileBanner as ProfileBannerType } from '../types';
 const bannerData: ProfileBannerType = {
   backgroundImage: { url: 'https://assets.nflxext.com/ffe/siteui/vlv3/6bb3bd6c-76b0-4108-9202-f68af1beb2a0/web_tall_panel/US-en-20260323-TRIFECTA-perspective_c0c45de7-747f-477d-98fe-b00abc5ec4fd_large.jpg' },
   headline: 'LALU M',
-  resumeLink: { url: 'https://drive.google.com/file/d/1K5Aj6jh4dvbHlQDSUAnmBW4-KEL7OUvq/view?usp=sharing' },
+  resumeLink: { url: 'https://drive.google.com/file/d/1Mxd5c4YBsDNavllQoevRRbjZbkR35Pzc/view?usp=sharing' },
   linkedinLink: 'https://www.linkedin.com/in/lalu-m-475312296',
   profileSummary: 'Undergraduate Computer Science student with a strong focus on Artificial Intelligence, Computer Vision, and Deep Learning. Experienced in developing, optimizing, and deploying AI-driven systems,including real-time vision-based models for societal applications. Skilled in model evaluation, performance benchmarking, and end-to-end ML pipeline design. Deeply interested in applied AI research,intelligent systems, and building scalable solutions that create measurable real-world impact.',
 };
