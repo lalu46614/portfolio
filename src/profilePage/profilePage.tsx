@@ -182,17 +182,23 @@ const ProfilePage: React.FC = () => {
 
   return (
     <>
-      {profile === 'recruiter' ? (
-        <canvas ref={canvasRef} className="profile-page-canvas" />
-      ) : (
-        <div
-          className="profile-page"
-          style={{ backgroundImage: `url(${backgroundImage})` }}
-        >
-          <ProfileBanner />
-        </div>
-      )}
-      {profile === 'recruiter' && <div className="profile-page-content"><ProfileBanner /></div>}
+      <div className="profile-page-wrapper">
+        {profile === 'recruiter' ? (
+          <div className="profile-hero">
+            <canvas ref={canvasRef} className="profile-page-canvas" />
+            <div className="profile-hero-content">
+              <ProfileBanner />
+            </div>
+          </div>
+        ) : (
+          <div
+            className="profile-page"
+            style={{ backgroundImage: `url(${backgroundImage})` }}
+          >
+            <ProfileBanner />
+          </div>
+        )}
+      </div>
       <TopPicksRow profile={profile} />
       <ContinueWatching profile={profile} />
     </>
