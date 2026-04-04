@@ -156,12 +156,6 @@ const ProfilePage: React.FC = () => {
       ctx.moveTo(w * 0.68, h * 0.13);
       ctx.lineTo(w * 0.68, h * 0.87);
       ctx.stroke();
-      ctx.lineWidth = 0.8;
-      ctx.strokeStyle = 'rgba(229,9,20,.18)';
-      ctx.beginPath();
-      ctx.moveTo(w * 0.705, h * 0.18);
-      ctx.lineTo(w * 0.705, h * 0.82);
-      ctx.stroke();
 
       t++;
       rafRef.current = requestAnimationFrame(draw);
