@@ -47,7 +47,7 @@ const ProfilePage: React.FC = () => {
     resize();
     
     // Create stars
-    stars = Array.from({ length: 70 }, () => ({
+    stars = Array.from({ length: 500 }, () => ({
       x: Math.random(),
       y: Math.random(),
       r: Math.random() * 1.4 + 0.3,
@@ -71,7 +71,7 @@ const ProfilePage: React.FC = () => {
       ctx.fillRect(0, 0, w, h);
 
       // Red nebula
-      const rx = w * 0.7 + Math.sin(t * 0.0005) * w * 0.035;
+      const rx = w * 0.85 + Math.sin(t * 0.0005) * w * 0.035;
       const ry = h * 0.38 + Math.cos(t * 0.00042) * h * 0.025;
       const nb = ctx.createRadialGradient(rx, ry, 0, rx, ry, w * 0.52);
       nb.addColorStop(0, `rgba(229,9,20,${0.17 + Math.sin(t * 0.001) * 0.05})`);
@@ -121,7 +121,7 @@ const ProfilePage: React.FC = () => {
       }
 
       // Figure silhouette
-      const fx = w * 0.7;
+      const fx = w * 0.82;
       const fy = h * 0.1;
       const fh = h * 0.78;
       const fw = fh * 0.38;
@@ -153,14 +153,14 @@ const ProfilePage: React.FC = () => {
       ctx.strokeStyle = `rgba(229,9,20,${0.48 + Math.sin(t * 0.002) * 0.18})`;
       ctx.lineWidth = 2;
       ctx.beginPath();
-      ctx.moveTo(w * 0.51, h * 0.13);
-      ctx.lineTo(w * 0.51, h * 0.87);
+      ctx.moveTo(w * 0.68, h * 0.13);
+      ctx.lineTo(w * 0.68, h * 0.87);
       ctx.stroke();
       ctx.lineWidth = 0.8;
       ctx.strokeStyle = 'rgba(229,9,20,.18)';
       ctx.beginPath();
-      ctx.moveTo(w * 0.535, h * 0.18);
-      ctx.lineTo(w * 0.535, h * 0.82);
+      ctx.moveTo(w * 0.705, h * 0.18);
+      ctx.lineTo(w * 0.705, h * 0.82);
       ctx.stroke();
 
       t++;
