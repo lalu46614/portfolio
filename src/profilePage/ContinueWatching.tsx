@@ -10,8 +10,8 @@ interface ContinueWatchingProps {
 
 const continueWatchingConfig = {
   recruiter: [
-    { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
-    { title: "Reading", imgSrc: "https://picsum.photos/id/1026/300/200", link: "/reading" },
+    { title: "Skills", imgSrc: "https://picsum.photos/seed/skills/300/200", link: "/skills" },
+    { title: "Certifications", imgSrc: "https://picsum.photos/seed/certifications/300/200", link: "/certifications" },
   ],
   stalker: [
     { title: "Music", imgSrc: "https://picsum.photos/id/1025/300/200", link: "/music" },
