@@ -18,6 +18,13 @@ const myCertifications = [
     link: "#"
   },
   {
+    title: "Samsung prism Internship",
+    issuer: "Samsung r&d institute, banglore",
+    issuedDate: "2026",
+    iconName: "company",
+    link: "https://drive.google.com/file/d/1JBzzMDtk68JnGWOrTt3dwM07C5ohC7-a/view?usp=sharing"
+  },
+  {
     title: "Python (Basics)",
     issuer: "HackerRank",
     issuedDate: "2024",

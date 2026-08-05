@@ -172,7 +172,8 @@ const ProfilePage: React.FC = () => {
     };
   }, [profile]);
 
-  const backgroundImage = profile === 'recruiter' || profile === 'stalker' ? blueImage : backgroundGif;
+  const backgroundImage = profile === 'recruiter' ? blueImage : backgroundGif;
+  const stalkerVideo = '/Film Noir detective going through a desk.mp4';
 
   return (
     <>
@@ -180,6 +181,21 @@ const ProfilePage: React.FC = () => {
         {profile === 'recruiter' ? (
           <div className="profile-hero">
             <canvas ref={canvasRef} className="profile-page-canvas" />
+            <div className="profile-hero-content">
+              <ProfileBanner />
+            </div>
+          </div>
+        ) : profile === 'stalker' ? (
+          <div className="profile-page video-bg">
+            <video
+              className="profile-page-video"
+              autoPlay
+              muted
+              loop
+              playsInline
+              src={stalkerVideo}
+            />
+            <div className="profile-page-overlay" />
             <div className="profile-hero-content">
               <ProfileBanner />
             </div>
